@@ -1,0 +1,30 @@
+<section>
+    <div class="calculadora">
+
+        <div class="painel">
+            <div *ngFor="let p of painel, let index of index">
+                <h1>{{ p }} </h1>
+            </div>
+            <h1 *ngIf="showResult">{{ result }} </h1>
+        </div>
+        <div class="align">
+            <div class="numbers">
+                <div class="calc" *ngFor="let num of numbers; let i of index">
+
+                    <button class="buttons" (click)="getNumber(i)"> {{ num }}</button>
+                </div>
+                <button class="buttons" (click)="total()"> = </button>
+                <button class="clear" (click)="limpar()">limpar tudo</button>
+            </div>
+
+
+            <div class="btn">
+                <button class="buttons operator-button" (click)="plus()" name="plus" id="plus"> + </button>
+                <button class="buttons operator-button" (click)="subtraction()" name="sub" id="sub"> - </button>
+                <button class="buttons operator-button" (click)="multiplication()" name="multiply" id="multiply"> x </button>
+                <button class="buttons operator-button" (click)="division()" name="division" id="division"> / </button>
+
+            </div>
+        </div>
+    </div>
+</section>
