@@ -1,0 +1,13 @@
+* {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.signature {
+    margin-top: 32px;
+}
+
+a {
+    color: #bf4080;
+    font-weight: 600;
+    text-decoration: none;
+}

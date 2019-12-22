@@ -5,6 +5,7 @@ section {
     box-shadow: 0px 9px 27px 0px rgba(0, 0, 0, 0.76);
     background-color: #2a2833;
     padding: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .painel {
@@ -14,7 +15,7 @@ section {
     -webkit-box-pack: end;
     justify-content: flex-end;
     align-items: center;
-    border: #7d7c7c 1px inset;
+    border: #7d7c7c 2px inset;
     background-color: #c7c581;
 }
 
@@ -56,9 +57,10 @@ section {
     width: 70px;
     height: 70px;
     border-radius: 8px;
-    background-color: azure;
+    background-color: #C5273E;
+    color: white;
     border: none;
-    font-size: 14px;
+    font-size: 28px;
 }
 
 .btn {

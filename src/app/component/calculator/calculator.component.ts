@@ -17,8 +17,10 @@ export class CalculatorComponent implements OnInit {
 	public result: number = 0;
 	public operator: string = '';
 	public resultTotal: number = 0;
-	public btn: any;
+	public operationsBtn: any;
 	public indexBtn : any;
+	public numbersBtn :any;
+	public finish: boolean = false;
 	
 
 	constructor() { }
@@ -42,12 +44,19 @@ export class CalculatorComponent implements OnInit {
 		}
 	}
 	disabledBtn(){
-		this.btn = document.querySelectorAll(".operator-button");
-		for ( this.indexBtn in this.btn ) {
-			if (this.btn.hasOwnProperty(this.indexBtn)) {
-				const element = this.btn[this.indexBtn];
-				this.btn[this.indexBtn].disabled = true;
+		this.operationsBtn = document.querySelectorAll(".operator-button");
+		this.numbersBtn = document.querySelectorAll(".number-button");
+		for ( this.indexBtn in this.operationsBtn ) {
+			if (this.operationsBtn.hasOwnProperty(this.indexBtn)) {
+				this.operationsBtn[this.indexBtn].disabled = true;
 			}	
+		}
+		if(this.finish){
+			for ( this.indexBtn in this.numbersBtn ) {
+				if (this.numbersBtn.hasOwnProperty(this.indexBtn)) {
+					this.numbersBtn[this.indexBtn].disabled = true;
+				}	
+			}
 		}
 		return
 	}
@@ -84,13 +93,14 @@ export class CalculatorComponent implements OnInit {
 
 	total() {
 		this.showResult = true;
+		this.finish = true;
 		//pega o ultimo numero clicado antes de clicar em resultado
 		this.numeral = this.painel.join('');
 		//limpa o painel para mostrar o resultado
 		this.painel = [];
 		// transforma em inteiro o ultimo numero digitado
 		this.resultTotal = parseInt(this.numeral);
-
+		this.disabledBtn();
 		if (this.operator === "sub"){
 			this.result = (this.calculo  - this.resultTotal) * 1 ;
 			return this.result;
@@ -107,14 +117,18 @@ export class CalculatorComponent implements OnInit {
 		if(isNaN(this.result) ) {
 			this.result = this.calculo;
 		}
+		
 		return this.result;
 	}
 
-	limpar() {
-		this.painel = [];
+	clear() {
+		/*this.painel = [];
 		this.num = 0;
 		this.values = [];
 		this.calculo = 0;
-		this.showResult = false;
+		this.showResult = false; */
+		window.location.reload();
+
+		
 	}
 }

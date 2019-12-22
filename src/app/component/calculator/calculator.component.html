@@ -11,10 +11,10 @@
             <div class="numbers">
                 <div class="calc" *ngFor="let num of numbers; let i of index">
 
-                    <button class="buttons" (click)="getNumber(i)"> {{ num }}</button>
+                    <button class="buttons number-button" (click)="getNumber(i)"> {{ num }}</button>
                 </div>
-                <button class="buttons" (click)="total()"> = </button>
-                <button class="clear" (click)="limpar()">limpar tudo</button>
+                <button class="buttons number-button" (click)="total()"> = </button>
+                <button class="clear" (click)="clear()">C</button>
             </div>
 
 
