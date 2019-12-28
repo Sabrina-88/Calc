@@ -25,7 +25,7 @@ export class CalculatorComponent implements OnInit {
 
 	constructor() { }
 	ngOnInit() {
-		console.log('Why are you so curious?');
+		console.log('→ Why are you so curious?');
 	}
 
 	getNumber(i) {
@@ -122,13 +122,6 @@ export class CalculatorComponent implements OnInit {
 	}
 
 	clear() {
-		/*this.painel = [];
-		this.num = 0;
-		this.values = [];
-		this.calculo = 0;
-		this.showResult = false; */
 		window.location.reload();
-
-		
 	}
 }
