@@ -70,3 +70,9 @@ section {
     height: 380px;
     margin: 0 5px;
 }
+
+.swal2-content {
+    color: #545454;
+    font-size: 1.125em;
+    font-weight: 400;
+}
