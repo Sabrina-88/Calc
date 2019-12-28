@@ -26,6 +26,7 @@ export class CalculatorComponent implements OnInit {
 	constructor() { }
 	ngOnInit() {
 		console.log('→ Why are you so curious?');
+		alert('Seja bem vindo, essa calculadora realiza as 4 operações matemáticas simples, ou seja, uma operação por vez.');
 	}
 
 	getNumber(i) {
@@ -63,6 +64,7 @@ export class CalculatorComponent implements OnInit {
 
 	plus() {
 		this.putNumbersInArray();
+
 		this.calculo += parseInt(this.element);
 	}
 
